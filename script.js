@@ -162,81 +162,59 @@ q14btn.addEventListener("click",function(){
 });
 
 
+
 // Q 15 (難)
 // switchまたはifを使います。
 // 要素.href = 'https://google.com';
 // でリンク先を追加できます。
 let q15btn = document.querySelectorAll(".q15-btn");
 let q15link = document.querySelector(".q15-link-list");
-console.log(q15btn);
-console.log(q15btn[0].textContent);
+// ボタン3つ分の情報が格納されている配列が入っている
+for (let q15btn_each of q15btn){
+	q15btn_each.addEventListener("click",function(){
+	// 	if(q15btn_each.textContent === "Google"){
+	// 	var a = document.createElement("a");
+	// 	a.textContent = q15btn_each.textContent;
+	// 	q15link.appendChild(a);
+	// 	a.href = 'https://google.com';
+	// } 
+	// else if (q15btn_each.textContent === "YouTube"){
+	// 	var a = document.createElement("a");
+	// 	a.textContent = q15btn_each.textContent;
+	// 	q15link.appendChild(a);
+	// 	a.href = 'https://youtube.com';
+	// } else if(q15btn_each.textContent === "Amazon"){
+	// 	var a = document.createElement("a");
+	// 	a.textContent = q15btn_each.textContent;
+	// 	q15link.appendChild(a);
+	// 	a.href = 'https://amazon.com';
+	// }
 
-q15btn.addEventListener("click",function(){
-	if(q15btn[0].textContent === "Google"){
-		var a = document.createElement("a");
-		a.textContent = q15btn[0].textContent
-		q15link.appendChild(a);
-		a.href = 'https://google.com';
-	} 
-	else if (q15btn[1].textContent === "YouTube"){
-		var a = document.createElement("a");
-		a.textContent = q15btn[1].textContent
-		q15link.appendChild(a);
-		a.href = 'https://youtube.com';
-	} else if(q15btn[2].textContent === "Amazon"){
-		var a = document.createElement("a");
-		a.textContent = q15btn[2].textContent
-		q15link.appendChild(a);
-		a.href = 'https://amazon.com';
-	}
-});
-
-// q15btn.addEventListener("click",function(){
-// 	if(q15btn[0].textContent === "Google"){
-// 		var a = document.createElement("a");
-// 		a.textContent = "Google";
-// 		q15link.appendChild(a);
-// 		a.href = 'https://google.com';
-// 	} 
-// 	else if (q15btn[1].textContent === "YouTube"){
-// 		var a = document.createElement("a");
-// 		a.textContent = "YouTube";
-// 		q15link.appendChild(a);
-// 		a.href = 'https://youtube.com';
-// 	} else if(q15btn[2].textContent === "Amazon"){
-// 		var a = document.createElement("a");
-// 		a.textContent = "Amazon";
-// 		q15link.appendChild(a);
-// 		a.href = 'https://amazon.com';
-// 	}
-// });
+	switch(q15btn_each.textContent){
+		case 'Google':
+			var a = document.createElement("a");
+		 a.textContent = q15btn_each.textContent;
+		 q15link.appendChild(a);
+		 a.href = 'https://google.com';
+			break;
+		case 'YouTube':
+			var a = document.createElement("a");
+		 a.textContent = q15btn_each.textContent;
+		 q15link.appendChild(a);
+		 a.href = 'https://youtube.com';
+			break;
+		case 'Amazon':
+			var a = document.createElement("a");
+		 a.textContent = q15btn_each.textContent;
+		 q15link.appendChild(a);
+		 a.href = 'https://amazon.com';
+			break;
+	}	
+	});
+}
 
 
-// switch(q15btn.textContent){
-// 		case 'Google':
-// 			var	a =document.createElement("a");
-// 			var text = document.createTextNode("Google");
-// 			a.appendChild(text);
-// 			q15link.appendChild(a);
-// 			var link = document.querySelector("a");
-// 			link.href = 'https://google.com';
-// 			break;
-// 		case 'YouTube':
-// 			var	a =document.createElement("a");
-// 			var text = document.createTextNode("YouTube");
-// 			a.appendChild(text);
-// 			q15link.appendChild(a);
-// 			var link = document.querySelector("a");
-// 			link.href = 'https://youtube.com';
-// 			break;
-// 		case 'Amazon':
-// 			var	a =document.createElement("a");
-// 			var text = document.createTextNode("Amazon");
-// 			a.appendChild(text);
-// 			q15link.appendChild(a);
-// 			var link = document.querySelector("a");
-// 			link.href = 'https://amazon.com';
-// 			break;
-// 	}
+
+
 
 
